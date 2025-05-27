@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Salud - Atención al Cliente</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Sistema de Atención - Nova Salud</h1>
+
+        <div id="alerta-stock" class="alerta"></div>
+
+        <h2>🧾 Lista de Productos</h2>
+        <table id="tabla-productos">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Stock</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h2>Añadir nuevo producto</h2>
+        <form id="form-add-product">
+            <input type="text" id="nombre" placeholder="Nombre" required />
+            <input type="number" id="stock" placeholder="Stock" min="0" required />
+            <input type="number" id="precio" placeholder="Precio" step="0.01" min="0" required />
+            <button type="submit">Agregar producto</button>
+        </form>
+        <div id="add-product-message"></div>
+
+        <h2>🛒 Registrar Venta</h2>
+        <form id="ventaForm">
+            <label for="producto">Producto:</label>
+            <select id="producto" required></select>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" min="1" required>
+            <button type="submit">Registrar Venta</button>
+        </form>
+
+        <h2>👤 Registrar Cliente</h2>
+        <form id="clienteForm">
+            <label for="nombreCliente">Nombre:</label>
+            <input type="text" id="nombreCliente" required>
+            <label for="telefonoCliente">Teléfono:</label>
+            <input type="text" id="telefonoCliente" required>
+            <button type="submit">Registrar Cliente</button>
+        </form>
+
+        <div id="mensaje" class="mensaje"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
